@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#girl-on-swing{
+    animation: swing 2s infinite linear;
+    transform-origin: top;
+    transform-box: fill-box;
+}
+#leaves-on-tree{
+    animation: leaves 2s ease-in-out infinite;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+#bottom-leaves{
+    animation: downleaves 2s ease-in-out infinite;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes swing {
+    0%{
+        transform: rotateZ(-15deg)
+    }
+    50%{
+        transform: rotateZ(10deg)
+    }
+    100%{
+        transform: rotateZ(-15deg)
+    }
+}
+@keyframes leaves {
+    0%{
+        transform: rotateY(-20deg)
+    }
+    50%{
+        transform: rotateY(10deg)
+    }
+    100%{
+        transform: rotateY(-20deg)
+    }
+}
+@keyframes downleaves {
+    0%{
+        transform: skewX(-6deg)
+    }
+    50%{
+        transform: skewX(6deg)
+    }
+    100%{
+        transform: skewX(-6deg)
+    }
+}
